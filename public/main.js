@@ -34,7 +34,7 @@ window.location.href="\login"
     btn.onclick=logout;
 
 
-  console.log(response.data)
+  //console.log(response.data)
     val=response.data
   
 

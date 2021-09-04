@@ -79,7 +79,7 @@ router.get('/getpayload',(req,res)=>{
         return x.email==email})
     if(indx!=-1)
    {
-    console.log(" found",req.query)
+  //  console.log(" found",req.query)
      res.json({
         email:User[indx].email,
         user:User[indx].user,
@@ -88,7 +88,7 @@ router.get('/getpayload',(req,res)=>{
     }
     else
     {
-        console.log("not found")
+       // console.log("not found")
         res.json({
             found:false
         })
@@ -103,7 +103,7 @@ router.get('/getpayload-contact',(req,res)=>{
         return x.email==email})
     if(indx!=-1)
    {
-    console.log(" found",req.query)
+   // console.log(" found",req.query)
      res.json({
      ... User[indx],
 
@@ -112,7 +112,7 @@ router.get('/getpayload-contact',(req,res)=>{
     }
     else
     {
-        console.log("not found")
+       // console.log("not found")
         res.json({
             found:false
         })
