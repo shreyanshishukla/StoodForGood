@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title > StoodforGood</title>
+    <link rel="icon" href="LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="selln.css">
+</head>
+<body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+     
+    const data='<%= db %>'
+    console.log("db",data)
+    if(data=="okay")
+        alert('data added to buy section')
+   </script>
+  
+   <div class="center">
+        <nav id="navbar">
+            
+            <ul>
+                <li class="item"><a class="nav" id="buy" href="/buy">Buy</a></li>
+                <li class="item"><a class="nav" id="sell" href="/sell">Sell/Donate</a></li>
+                <li class="item"><a class="nav" href="/about">Our Team</a></li>
+                <li class="item"><a class="nav" href="/login">Login</a></li>
+            </ul>
+       
+        <div class="action">
+            <div class="profile" onclick="menuToggle();">
+                <img src="profileb.png" alt="">
+            </div>
+            <div class="menu">
+                <h2 id="name">NOBODY</h2>
+                <h4 id="mail">EMAIL</h4>
+                <h4 id="no">NUMBER</h4>
+                <h3 id="city">LUCKNOW</h3>
+                <br>
+                <h5><img src="logoutb.png" alt=""><a href="#">LOGOUT</a></h5>
+            </div>
+        </div>
+    </nav>
+   </div>
+    <script>
+        function menuToggle(){
+            const toggl = document.querySelector('.menu')
+            toggl.classList.toggle('active')
+        }
+    </script>
+    <div class="form">
+    <div class="inner font-effect-emboss">
+       
+        <form action="\sell" enctype="application/x-www-form-urlencoded" method="POST" class="foc">
+            <div>
+            <h2 >Fill the details </h2>
+            
+           
+
+
+            <label>Phone number</label>
+            <input type="tel" id="phnnumber" pattern="[0-9]{10}" name="phnnumber"  required/>
+            <br>
+
+            <label>Email</label>
+            <input type="email" id="email" name="email" required/>
+            <br>
+
+            <label>City</label>
+            <input type="text" id="city"name="city" required />
+            <br>
+        
+            <label >Type</label>
+            <br>
+
+            <input type="radio" id="medicine" name="donationtype" value="medicine" /  >
+            <label >Medicine</label>
+            <input type="radio" id="devices" name="donationtype" value="devices" /  >
+            <label >Machine </label>
+            <br>
+            <br>
+            <br>
+
+            <label >NAME OF MEDICINE/DEVICE </label>
+            <br>
+            <br>
+            <input id="nameofmed" name="nameofmed" type="text" required/>
+            <br>
+            <label >QUANTITY </label>
+            <input id="QUATITY" type="number" min=1 name="quantity" required/ >
+            
+
+            <br>
+            <br>
+
+            <br>
+
+            <label >Donate for free or rent or sell </label>
+            <br>
+
+            <input type="radio" id="free" name="type" value="free" /  >
+            <label >FREE</label>
+            <input type="radio" id="sell" name="type" value="sell" /  >
+            <label >Sell</label>
+            <input type="radio" id="rent" name="type" value="rent" /  >
+            <label >Rent</label>
+            <br>
+            <br>
+
+            <br>
+
+
+           
+
+       
+           
+
+            <button type="submit"  class="submit">Submit</button>
+       
+
+
+
+
+        </div>
+        <script>
+            const inp=document.querySelectorAll('input')
+            inp.forEach(i=>{
+                i.classList.add("foc");
+            })</script>
+        </form>
+        </div>
+        
+            <img src="donate1.png"></img>
+    </div>
+</div>
+<footer>
+        <div id="mainfoo">
+            <div id="logofoo">
+                <img src="/LOGO2.svg" alt="">
+                <h2>Stood for Good</h2>
+            </div>
+            <p>Lucknow,Uttar Pradesh</p>
+            <p>Contact: stoodforgood@gmail.com</p>
+        </div>
+        <div id="foo">
+            Copyright &copy; www.StoodforGood.com. All Rights Reserved!
+        </div>
+    </footer>
+    
+            <script src="sell.js"></script>
+    </body>
+</html>

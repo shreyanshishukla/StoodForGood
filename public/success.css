@@ -1,0 +1,33 @@
+#here
+{    visibility: hidden;
+
+}
+.hidden
+{
+    visibility: hidden;
+
+}
+body{
+    background-image: linear-gradient(to right,rgb(198, 180, 248),rgb(76, 56, 253));
+}
+h3{
+    font-size: 30px;
+}
+#here{
+    background-color: white;
+    font-family: "Baloo Bhai 2", cursive;
+    margin-left: 25rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: fit-content;
+    padding-bottom: 2rem;
+    
+}
+#btn{
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    font-size: 1.5rem;
+    border: 3px solid black;
+}

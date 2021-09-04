@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share here and help others | StoodforGood.com</title>
+ 
+    <link rel="icon" href="LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600&family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrapper">
+  <nav id="navbar">
+        <div id="logo">
+            <img src="LOGO.svg" alt="StoodforGood.com">
+        </div>
+
+        <ul>
+            <li class="item"><a class="nav" id="buy" href="/buy">Buy</a></li>
+            <li class="item"><a class="nav" id="sell" href="/sell">Sell/Donate</a></li>
+            <li class="item"><a class="nav" href="/about">Our Team</a></li>
+            <li class="item"><a class="nav" href="/login">Login</a></li>
+        </ul>
+        <div class="action">
+            <div class="profile" onclick="menuToggle();">
+                <img src="/profilew.png" alt="">
+            </div>
+            <div class="menu">
+                <h2 id="name">NOBODY</h2>
+                <h4 id="mail">EMAIL</h4>
+                <h4 id="no">NUMBER</h4>
+                <h3 id="city">LUCKNOW</h3>
+                <br>
+                <h5><img src="/logoutb.png" alt=""><button id="btn" onclick="login();">Login</button></h5>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function menuToggle(){
+            const toggl = document.querySelector('.menu')
+            toggl.classList.toggle('active')
+        }
+        function login()
+        {
+                 const btn =document.getElementById('btn')
+                btn.innerHTML="Logout";
+               btn.onclick=logout;
+                window.location.href="\login"
+
+
+
+        }
+        function logout()
+        {   
+             const payload = sessionStorage.getItem("payload");
+            
+            sessionStorage.removeItem('payload');
+            window.alert("you have been logged out")
+            const user_name=document.getElementById('name')
+    const no =document.getElementById('no')
+
+    const city =document.getElementById('city')
+
+    const mail =document.getElementById('mail')
+
+    const btn =document.getElementById('btn')
+
+            
+              user_name.innerHTML="NO USER";
+              no.innerHTML="+91 XXXXXXXX";
+                city.innerHTML="City";
+               mail.innerHTML="nouser@email";
+               btn.innerHTML="Login";
+               btn.onclick=login;
+               
+
+        }
+    </script>
+
+    <section id="home">
+        <div id="datadiv">
+            <p>There was a crisis, which country witnessed during the second wave of Covid-19 pandemic. The long queues to refill oxygen cylinders, multiple SOS calls by hospitals for oxygen supply, or pain of the patients struggling to get even a bed in any hospital made a deep imprint on people’s mind. Many lives are lost due to  the shortage of necessary equipments. This is an initiative to prevent any further problems due to the shortage of oximeter,Oxygen cylinder, medics etc.<br>If you have excess of the above mentioned, consider donating or selling to help others in this time of crisis.</p>
+        </div>
+        <div id="btndiv">
+            <button class="btn" id="buybtn"><a href="/buy">BUY</a></button>
+            <button class="btn" id="sellbtn"><a href="/sell">SELL/DONATE</a></button>
+        </div>
+    </section>
+
+    <footer>
+        <div id="mainfoo">
+            <div id="logofoo">
+                <img src="/LOGO2.svg" alt="">
+                <h2>Stood for Good</h2>
+            </div>
+            <p>Lucknow,Uttar Pradesh</p>
+            <p>Contact: stoodforgood@gmail.com</p>
+        </div>
+        <div id="foo">
+            Copyright &copy; www.StoodforGood.com. All Rights Reserved!
+        </div>
+    </footer>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="main.js">
+
+</script>
+</body>
+</html>

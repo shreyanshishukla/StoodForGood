@@ -1,0 +1,274 @@
+body{
+    background-color: black;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+  
+  
+}
+
+/* CSS Reset */
+* {
+    margin: 0%;
+    padding: 0%;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+.wrapper
+{
+  display: flex;
+  flex-direction: column;
+}
+/* Navbar */
+  #navbar {
+   
+    display: flex;
+    height: 20%;
+    top: 0px;
+    align-items: center;
+    position: relative;
+  }
+  #navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.54;
+  }
+
+/* Logo and bg */
+#logo {
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 15rem;
+  }
+  #logo img {
+    margin-top: 0.5rem;
+    margin-left: .5rem;
+    height: 6rem;
+    width: 6rem;
+    /* border-radius: 50%; */
+  }
+
+/* Navbar: list styling */
+  #navbar ul {
+    display: flex;
+    list-style: none;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  #navbar ul li {
+    font-size: 1.7rem;
+  }
+  #navbar ul li a {
+    display: block;
+    padding: 3px 23px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  #navbar ul li a:hover {
+    background-color: white;
+    color: rgb(80,91,243);
+    font-weight: bolder;
+  }
+  .action{
+    position: absolute;
+    top: 17px;
+    right: 4rem;
+  }
+  .profile{
+    position: relative;
+    right: 0.3rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  .profile img{
+    height: 60px;
+    width: 60px;
+  }
+  .btn a{
+    text-decoration: none;
+    font-family: "Baloo Bhai 2", cursive;
+  }
+
+  #buybtn a{
+    color: black;
+  }
+  #sellbtn a{
+    color: white;
+  }
+  .menu{
+    /* position: absolute; */
+    padding: 1rem;
+    background: #ffffff;
+    border: 2px solid rgb(54,69,217);
+    right: 22px;
+    width: 180px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .menu button{
+    width: 80px;
+    height: 40px;
+    font-size: x-large;
+    color: rgb(80,91,243);
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgb(198, 202, 248);
+  }
+  .menu img{
+    max-width: 30px;
+    padding-right: 8px;
+    opacity: 0.9;
+    transition: 0.5s;
+  }
+  .menu h5:hover img{
+    opacity: 1;
+  }
+  .menu h5:hover button{
+    color: rgb(54,69,217);
+  }
+  .menu h5{
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    margin-left: 0.8em;
+  }
+  .active{
+    visibility: visible;
+    opacity: 1;
+  }
+
+/* Home Section */
+#home {
+    
+    height: 50%;
+    top: 0px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    align-items: center;
+  }
+  #home::before {
+    content: "";
+    background: url("StoodforGoodnn1.svg") no-repeat center center/cover;
+    position: absolute;
+    /* background-size: 1420px 6000px; */
+    top: -120px;
+    left: 0px;
+    bottom: -3%; 
+    /* height: 100%; */
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9; 
+    padding-bottom: 4rem;
+  }
+ 
+  #home h1 {
+    color: white;
+  }
+  #home p {
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Baloo Bhai 2", cursive;
+    margin-top: 6rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  #buybtn{
+      background-color: white;
+  }
+  #sellbtn{
+      background-color: black;
+      color: white;
+  }
+  #btndiv{
+      display: flex;
+      flex-direction: row;
+      width: 20%;
+      margin-top: 1rem;
+      height: 8rem;
+  }
+  #datadiv{
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 0rem;
+      padding: 2rem 8rem;
+  }
+
+/* Footer section */
+footer{
+    background-color: white;
+    height: 20%;
+  
+}
+#mainfoo{
+    align-items: center;
+    margin-left: 26rem;
+    font-family: "Baloo Bhai 2", cursive;
+    padding: 5rem;
+}
+#logofoo{
+    display: flex;
+    flex-direction: row;
+    font-size: xx-large;
+}
+#logofoo h2{
+    margin-top: 1rem;
+}
+#mainfoo p{
+    font-size: x-large;
+    margin-left: 2.5rem;
+
+}
+#foo{
+    background-color: black;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    font-size: larger;
+  }
+
+
+/* Utility */
+.nav {
+    font-size: 1.9rem;
+    padding: 13px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  .btn {
+    display: inline;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 18px;
+    border: 2px solid rgb(80,91,243);
+    border-radius: 15px;
+    cursor: pointer;
+    height: 3.5rem;
+  }
+  .btn:hover{
+    font-weight: bolder;
+  }
+
+  

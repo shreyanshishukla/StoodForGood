@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="LOGO.svg" type="image/x-icon">
+
+  <title>Stood For Good</title>
+</head>
+<body>
+  <link rel="stylesheet" href="success.css"></link>
+
+    <h2 id="login" style="text-align: center">
+      <div id="here">
+      <form enctype="application/x-www-form-urlencoded" method="POST" action="/" >
+        <br>
+        <br>
+      <label   >Enter your contact details</label>
+      <br>
+      <br>
+
+      <label   >Phone number</label>
+      
+      <input   type="tel" id="phnnumber" pattern="[0-9]{10}" name="phnnumber"  required/>
+      <br>
+      <input type="email" id="email" name="email" class=".hidden" required/>
+      <input type="name" id="name" name="name"  class=".hidden"  required/>
+      <br>
+
+
+            <label   >City</label>
+      
+
+            <input    type="text" id="city"name="city" required />
+      <br>
+      <br>
+      <br>
+
+      <input    id="btn" type="submit" value="NEXT"/>
+    </form>
+  </div>
+    </h2>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    <script>
+      // Fetching payload from sessionStorage
+      const payload = JSON.parse(sessionStorage.getItem("payload"));
+      const forms= document.querySelector('#here')
+      console.log("here",forms)
+      const name = document.querySelector('#name')
+
+      const email = document.querySelector('#email')
+
+    
+      
+
+
+      // Checking if the payload is available or not
+      if (payload) {
+        // If the payload is available then console.log the payload
+        axios.get("http://localhost:3000/getpayload",{
+          params:{
+            email:payload.identifier
+          }
+        }).then((response)=>{
+          if(response.data.found==false)
+          {
+      forms.style.visibility="visible";
+      name.style.visibility="hidden"
+      email.style.visibility="hidden"
+      
+      name.value=payload.customFieldInputValues.Name;
+      email.value=payload.identifier
+     
+
+      window.location.href="#here"
+          }
+          else
+          {
+         
+           const val=response.data
+           console.log("val",val)
+            window.location.href=`/?user=${val.user}&email=${val.email}`
+          }
+        }).catch((err)=>{
+          console.log(err)
+        })
+       
+      } else {
+        // If the payload isn't available, that means the user hasn't logged in yet.
+        // So redirecting back to "/login"
+        window.location.href = "/login";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+footer{
+    background-color: white;
+    height: 20%;
+  
+}
+#mainfoo{
+    align-items: center;
+    margin-left: 26rem;
+    font-family: "Baloo Bhai 2", cursive;
+    padding: 5rem;
+}
+#logofoo{
+    display: flex;
+    flex-direction: row;
+    font-size: xx-large;
+}
+#logofoo h2{
+    margin-top: 1rem;
+}
+#mainfoo p{
+    font-size: x-large;
+    margin-left: 2.5rem;
+
+}
+#foo{
+    background-color: black;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    font-size: larger;
+  }
+
+
+/* Utility */
+.nav {
+    font-size: 1.9rem;
+    padding: 13px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  .btn {
+    display: inline;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 18px;
+    border: 2px solid rgb(80,91,243);
+    border-radius: 15px;
+    cursor: pointer;
+    height: 3.5rem;
+  }
+  .btn:hover{
+    font-weight: bolder;
+  }
+
+  

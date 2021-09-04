@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link  rel="stylesheet" href="buy.css">
+    <link  type="text/css" href="Footer.css">
+    <title > StoodforGood</title>
+    <link  href="LOGO.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="center">
+        <nav id="navbar">
+            
+            <ul>
+                <li class="item"><a class="nav" id="buy" href="/buy">Buy</a></li>
+                <li class="item"><a class="nav" id="sell" href="/sell">Sell/Donate</a></li>
+                <li class="item"><a class="nav" href="/about">Our Team</a></li>
+                <li class="item"><a class="nav" href="/login">Login</a></li>
+            </ul>
+       
+        <div class="action">
+            <div class="profile" onclick="menuToggle();">
+                <img src="profileb.png" alt="">
+            </div>
+            <div class="menu">
+                <h2 id="name">NOBODY</h2>
+                <h4 id="mail">EMAIL</h4>
+                <h4 id="no">NUMBER</h4>
+                <h3 id="city">LUCKNOW</h3>
+                <br>
+                <h5><img src="logoutb.png" alt=""><a href="#">LOGOUT</a></h5>
+            </div>
+        </div>
+    </nav>
+   </div>
+    <script>
+        function menuToggle(){
+            const toggl = document.querySelector('.menu')
+            toggl.classList.toggle('active')
+        }
+    </script>
+    <div >
+    
+       <div class="availabilities"> 
+           <H2>ITEMS CURRENTLY AVAILABLE</H2>
+           <% if(db!=null) {%>
+            <%db.forEach(data=>{%>
+          
+                <div class="info">
+                    
+                    <h2><%= data.nameofmed %></h3>
+                    <H4>QUANTITY : <%= data.quantity %>
+                        <BR>
+                        LOCATION:<%= data.city %>
+                    </H4>
+                    <P class="type"><%= data.type %></P>
+                    <p class="type2">CONTACT INFORMATION</p>
+                    <P class="type3">SELLER: <%= data.name %>
+                        <BR>
+                       MOBILE NUMBER:+91 <%= data.phnnumber %>
+                       <BR>
+                          EMAIL :<%= data.email %>
+  
+                    </P>
+  
+                    
+  
+                </div>
+                
+                   
+                
+  
+         
+            
+
+            <% })}%>
+          
+          <!--2ND DATA-->
+         
+          
+
+       </div>
+    </div>
+    
+    <footer>
+        <div id="mainfoo">
+            <div id="logofoo">
+                <img src="/LOGO2.svg"  alt="">
+                <h2>Stood for Good</h2>
+            </div>
+            <p>Lucknow,Uttar Pradesh</p>
+            <p>Contact: stoodforgood@gmail.com</p>
+        </div>
+        <div id="foo">
+            Copyright &copy; www.StoodforGood.com. All Rights Reserved!
+        </div>
+    </footer>
+
+    </body>
+</html>

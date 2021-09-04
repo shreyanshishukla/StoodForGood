@@ -1,0 +1,318 @@
+body
+{
+    height: fit-content;
+    background-color: white;
+    width: auto;
+    overflow-x: hidden;
+}
+.flexb
+{
+    display: flex;
+    flex-direction: column;
+}
+.center
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0;
+  padding: 0;
+  
+ 
+
+}
+
+#navbar {
+    display: flex;
+    height: 7em;
+    top: 2rem;
+    width: fit-content;
+    margin-top: 3rem;
+    margin-left: 0PX;
+    
+    background-color: white;
+   
+   
+  }
+  #navbar::before {
+    content: "";
+    /* background-color: rgb(80,91,243); */
+    border-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+  }
+
+
+/* Navbar: list styling */
+  #navbar ul {
+    display: flex;
+    list-style: none;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding: 0;
+  }
+  #navbar ul li {
+    font-size: 1.9rem;
+  }
+  #navbar ul li a {
+    display: block;
+    padding: 3px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  #navbar ul li a:hover {
+    background-color:white ;
+    color: rgb(80,91,243) ;
+    font-weight: bolder;
+  }
+  .action{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 7px;
+    right: 4rem;
+  }
+  .profile{
+    position: relative;
+    top: 1.6rem;
+    /* margin-top: 2rem; */
+    right: 0.3rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  .profile img
+  {
+    height: 60px;
+    width: 60px;
+    margin-top: 20px;
+  }
+  .menu{
+    /* position: absolute; */
+    /* padding: 1rem; */
+    background: #ffffff;
+    border: 2px solid rgb(54,69,217);
+    top: 7rem;
+    right: 22px;
+    margin-top: 2rem;
+    width: 180px;
+    height: 200px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .menu a{
+    text-decoration: none;
+    font-size: larger;
+    color: rgb(80,91,243);
+  }
+  .menu img{
+    max-width: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 8px;
+    opacity: 0.9;
+    transition: 0.5s;
+  }
+  .menu h4{
+      margin: 2px;
+  }
+  .menu h3{
+      margin: 2px;
+  }
+  .menu h5:hover img{
+    opacity: 1;
+  }
+  .menu h5:hover a{
+    color: rgb(54,69,217);
+  }
+  .menu h5{
+    margin-top: 0px;
+    font-size: larger;
+    display: flex;
+    height: 10px;
+    align-items: center;
+    margin-left: 0.8em;
+  }
+  .active{
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+.form
+{
+    height: 100%;
+    width:100%;
+     margin: 0;
+     padding: 0;
+     margin-left: 8vw;
+  
+    display: flex;
+  
+   
+}
+.inner{
+    width: 40%;
+    height: auto;
+    margin: 0;
+     padding: 0;
+    
+    color: rgb(80,91,243);
+    font-family: "Baloo Bhai 2", cursive;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+ 
+  
+}
+form{
+    background-color: white;
+    margin: 0;
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    /* border-radius: 5%; */
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+form h2{
+    text-decoration: underline;
+}
+label
+{   margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+ input[type=radio] {
+        border: 1px;
+    margin-bottom: 2rem;
+
+        width: 7%;
+        height: 1em;
+    }
+ input[type=text] {
+       background-color: rgb(160, 166, 246);
+       color: white;
+        border: 4px solid rgba(26, 37, 202, 0.63);
+        width: 65%;
+        height: 2.8em;
+        font-weight: bolder;
+    margin-bottom: 2.5rem;
+    border-radius: 15px;
+
+    }
+input[type=email] {
+    border-radius: 15px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(160, 166, 246);
+        border: 4px solid rgba(26, 37, 202, 0.63);
+        width: 45%;
+    margin-bottom: 2rem;
+     
+        height: 2.8em;
+    }
+input[type=tel] {
+        color: white;
+        font-weight: bolder;
+        border: 4px solid rgba(26, 37, 202, 0.63);
+        background-color: rgb(160, 166, 246);
+        width: 40%;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+
+        height: 2.8em;
+    }
+input[type=number] {
+        border: 4px solid rgba(26, 37, 202, 0.63);
+        color: white;
+        font-weight: bolder;
+        background-color: rgb(160, 166, 246);
+        width: 40%;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        caret-color: white;
+        height: 2.8em;
+    }
+
+.foc:focus{
+    outline: none;
+}
+
+.form img{
+    width: 40%;
+    height: auto;
+    margin-top: 6.5rem;
+    /* border-radius: 40px 20px; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 2rem;
+   
+
+}
+.submit
+{
+    border-radius: 15px;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    margin-left:5em ;
+    margin-bottom: 3em;
+    background-color : rgb(80,91,243);
+    color: white;
+    
+
+
+}
+.submit:hover
+{
+    transform: translate(-5px,5px);
+    box-shadow: 5px 10px rgb(80,91,243);
+}
+
+/* Footer section */
+footer{
+    background-color: white;
+    height: 20%;
+  
+}
+#mainfoo{
+    align-items: center;
+    margin-left: 10rem;
+    font-family: "Baloo Bhai 2", cursive;
+    padding: 5rem;
+}
+#logofoo{
+    display: flex;
+    flex-direction: row;
+    font-size: xx-large;
+}
+#logofoo h2{
+    margin-top: 1rem;
+}
+#mainfoo p{
+    font-size: x-large;
+    margin-left: 2.5rem;
+
+}
+#foo{
+    background-color: black;
+    /* display: inline; */
+    width: 100%;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    font-size: larger;
+  }
