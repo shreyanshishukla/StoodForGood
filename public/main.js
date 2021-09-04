@@ -10,11 +10,7 @@ axios.get("http://stoodforgood.herokuapp.com/getpayload-contact",{
 }).then((response)=>{
   if(response.data.found==false)
   {
-
-
-
-
-window.location.href="\login"
+window.location.href="/login"
   }
   else
   { 
@@ -34,7 +30,7 @@ window.location.href="\login"
     btn.onclick=logout;
 
 
-  //console.log(response.data)
+  console.log(response.data)
     //val=response.data
   
 
@@ -47,7 +43,7 @@ window.location.href="\login"
 } else {
 // If the payload isn't available, that means the user hasn't logged in yet.
 // So redirecting back to "/login"
-window.location.href="\login"
+window.location.href="/login"
 
 }
 
