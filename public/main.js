@@ -3,7 +3,7 @@ const payload = JSON.parse(sessionStorage.getItem("payload"));
 console.log(payload)
 if (payload) {
 // If the payload is available then console.log the payload
-axios.get("http://stoodforgood.herokuapp.com:3000/getpayload-contact",{
+axios.get("http://stoodforgood.herokuapp.com/getpayload-contact",{
   params:{
     email:payload.identifier
   }
