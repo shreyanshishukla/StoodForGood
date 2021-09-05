@@ -59,7 +59,7 @@
       // Checking if the payload is available or not
       if (payload) {
         // If the payload is available then console.log the payload
-        axios.get("http://localhost:3000/getpayload",{
+        axios.get("https://stoodforgood.herokuapp.com/getpayload",{
           params:{
             email:payload.identifier
           }
@@ -79,9 +79,9 @@
           else
           {
          
-           const val=response.data
-           console.log("val",val)
-            window.location.href=`/?user=${val.user}&email=${val.email}`
+           //const val=response.data
+          // console.log("val",val)
+            window.location.href='/'//home
           }
         }).catch((err)=>{
           console.log(err)

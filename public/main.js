@@ -3,21 +3,17 @@ const payload = JSON.parse(sessionStorage.getItem("payload"));
 console.log(payload)
 if (payload) {
 // If the payload is available then console.log the payload
-axios.get("http://localhost:3000/getpayload-contact",{
+axios.get("http://stoodforgood.herokuapp.com/getpayload-contact",{
   params:{
     email:payload.identifier
   }
 }).then((response)=>{
   if(response.data.found==false)
   {
-
-
-
-
-window.location.href="\login"
+window.location.href="/login"
   }
   else
-  {
+  { 
     const user_name=document.getElementById('name')
     const no =document.getElementById('no')
 
@@ -35,7 +31,7 @@ window.location.href="\login"
 
 
   console.log(response.data)
-    val=response.data
+    //val=response.data
   
 
    
@@ -46,7 +42,8 @@ window.location.href="\login"
 
 } else {
 // If the payload isn't available, that means the user hasn't logged in yet.
-// So redirecting back to "/login"window.location.href="\login"
+// So redirecting back to "/login"
+window.location.href="/login"
 
 }
 
