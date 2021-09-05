@@ -4,13 +4,16 @@
     padding: 20px ;
   
     border: 6px solid;
-    background-color: #CCCCFF;
+    background-color: #735bf8;
     border-radius: 20px;
     
     background-size: contain ;
     background-repeat:  no-repeat;
     background-position: right;
   
+  }
+  .availabilities h2{
+    text-align: center;
   }
   
   footer{
@@ -179,14 +182,14 @@
     padding: 20px ;
     border-bottom: 5px solid black;
   
-    background-color: rgb(129, 123, 123);
+    background-color: rgb(228, 227, 227);
     
     
   }
   .info:nth-child(2n+0) 
   {
     background-image:url("machines.png");
-    background-color: rgba(213, 217, 231, 0.87);
+    background-color: rgba(167, 154, 243, 0.87);
     
   
   
@@ -194,7 +197,7 @@
   .info:nth-child(2n+1) 
   {
     background-image:url("medicine.png");
-    background-color:hsl(240, 51%, 86%);
+    background-color:hsl(239, 30%, 66%);
     
   
     
